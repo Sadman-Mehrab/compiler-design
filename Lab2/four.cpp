@@ -1,8 +1,6 @@
 #include <iostream>
 #include <map>
-
 using namespace std;
-
 map <string, bool> reservedKeywords;
 
 void setReservedKeywords(){
@@ -51,9 +49,7 @@ void setReservedKeywords(){
     reservedKeywords["long"] = true;
     reservedKeywords["struct"] = true;
     reservedKeywords["while"] = true;
-
 }
-
 
 
 bool isIdentifierValid(string s){
@@ -95,8 +91,6 @@ bool isIdentifierValid(string s){
         }
     }
 
-
-
     if(s[0] != '_'){
         if(s[0] == toupper(s[0])){
             cout<<"Identifier: "<<s<<" is Not In The Recommended camelCase Convention \n";
@@ -107,12 +101,8 @@ bool isIdentifierValid(string s){
         cout<<"Identifier: "<<s<<" is Not is Not In The Recommended camelCase Convention \n";
     }
 
-
-
     return true;
 }
-
-
 
 int main () {
     setReservedKeywords();
@@ -120,5 +110,4 @@ int main () {
     getline(cin, s);
     bool test = isIdentifierValid(s);
     cout<<test;
-
 return 0;}
